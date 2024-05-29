@@ -183,12 +183,17 @@ body{
 @media (max-width: 600px) {
   /* Your CSS rules for mobile phones */
 
+  body{
+    width: 100vh;
+  }
   .product-description{
     /* margin-top: 10px; */
     margin-left: 35px;
+    
   }
   .description{
-    width: 70%;
+    width: 50%;
+    margin-top: 2px;
   }
  
   .content{
@@ -219,13 +224,23 @@ body{
     margin-top: 7px;
     display: block;
     position: absolute;
-    top: 550px;
-    left: 250px;
+    top: 565px;
+    left: 120px;
     /* height: 40px; */
+  }
+
+  .section-1 , .section-2{
+    font-size: 20px;
+    margin-top: 2pxpx;
+  }
+
+
+  .price{
+    font-size: 20px;
   }
 
 
   .title{
-    font-size: 50px;
+    font-size: 30px;
   }
 }
