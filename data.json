@@ -1,0 +1,61 @@
+{
+    "header" :{
+        "logo": "./images/Logo.svg",
+        "nav":[
+            {
+                "name": "Shop",
+                "link" : ""
+                
+            },
+            {
+                "name": "Brands",
+                "link": ""
+                
+            },
+            {
+                "name": "Contact Us",
+                "link": ""
+            }],
+        "signup":"true"
+    },
+    "products":[
+        {
+            "name" : "Exquisite Watches",
+            "subtext" : "Gold Luxury, Choose Us",
+            "image" : "./images/gold.svg",
+            "description" : "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch"
+        },
+        {
+          "name": "Dainty Timepieces",
+          "subtext": "Silver Luxury, Choose Us",
+          "image": "./images/black.svg",
+          "description" : "Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece"
+        },
+        {
+          "name": "Elegant Timepieces",
+          "subtext": "Choose Luxury, Choose Us",
+          "image": "./images/green.svg",
+          "description" : "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch"
+        },
+        {
+          "name": "Refined Timepieces",
+          "subtext": "Choose Luxury, Choose Us",
+          "image": "./images/red.svg",
+          "description" :"Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece"
+        }
+    ],
+    "socials" : [
+      {
+        "name": "Facebook",
+        "link": ""
+      },
+      {
+        "name": "Twitter",
+        "link": ""
+      },
+      {
+        "name": "Youtube",
+        "link": ""
+      }
+    ]
+}

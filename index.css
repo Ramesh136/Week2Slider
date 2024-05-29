@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(203, 103, 103);
+}
+
+.socials{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    min-width: 240px;
+    margin-left: 54px;
+    margin-top: 30px;
+    justify-content: space-between;
+    border-radius: 15px;
+    width: fit-content;
+}
+
+.img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    min-height: 60px;
+    padding: 9px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.splide__list{
+    width: 250px;
+    height:400px;
+    /* padding: 0.25px 0px 0.25px 0px; */
+}
+
+.header{
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins';
+    margin: 54px;
+}
+
+.logo{
+    width: 100px;
+    height: 51px;
+}
+
+.nav{
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+
+}
+
+.navList{
+    display: flex;
+    gap: 80px;
+
+}
+
+.auth{
+    /* align-self: center; */
+    text-align: center;
+    background-color: #1C1415;
+    width: 150px;
+    height: 51px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Poppins";
+    padding: 14px 38px 14px 38px;
+    border-radius: 50px;
+    line-height: 20px;   
+
+}
+
+.product-description{
+    margin-left: 54px;
+    width: 550px;
+}
+
+.title{
+    width: 645px;
+    height: 104px;
+    color: #FFFFFF;
+    font-family: "Sofia Sans";
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 104.12px;
+    letter-spacing: -0.01em;
+    text-align: left;
+}
+
+.section-1 , .section-2{
+    display: inline-block;
+    font-family: "Sofia Sans";
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 60.06px;
+    letter-spacing: -0.01em;
+    text-align: left;
+}
+.section-1{
+    color: #FFFFFF;
+    margin-right: 5px;
+}
+
+.description{
+    margin-top: 50px;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+
+}
+
+.content{
+    display: flex;
+}
+
+.splide{
+    margin-left: 80px;
+}
+/* .section-2{
+    color: #1C1415;
+} */
+.watch img{
+    width: 500px;
+    height: 200px;
+}
