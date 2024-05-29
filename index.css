@@ -173,10 +173,10 @@ body{
 .splide__pagination{
     display: none;
 }
-
 .splide__arrow{
-    fill: white;
+    background-color: transparent;
 }
+
 
 
 
@@ -243,4 +243,24 @@ body{
   .title{
     font-size: 30px;
   }
+
+  .splide{
+    margin-left: 10px !important;
+    /* width: 80%; */
+  }
+
+
+ .prev{
+    height: 50px;
+ }
+
+ .next{
+    /* top: 800px;
+    /* left: 10px; */
+    /* position: absolute;  */
+    margin-left: 10px;
+    height: 50px;
+ }
+
+
 }
