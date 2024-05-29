@@ -6,6 +6,12 @@
 
 body{
     background-color: rgb(203, 103, 103);
+    /* background: linear-gradient(105.54deg, #F4A764 -2.93%, #FFDEC2 72.14%);
+    background: linear-gradient(105.54deg, #ADB0B0 -2.93%, #E1E1E1 72.14%);
+    background: linear-gradient(105.54deg, #30A357 -2.93%, #75E39A 72.14%);
+    background: linear-gradient(105.54deg, #F24F4F -2.93%, #FFA895 72.14%); */
+
+
 }
 
 .socials{
@@ -24,15 +30,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 60px;
-    min-height: 60px;
+    min-width: 52px;
+    min-height: 52px;
     padding: 9px;
     border: 2px solid white;
     border-radius: 50%;
 }
 
 .splide__list{
-    width: 250px;
+    width: 300px;
     height:400px;
     /* padding: 0.25px 0px 0.25px 0px; */
 }
@@ -85,6 +91,16 @@ body{
     line-height: 20px;   
 
 }
+.fade-in {
+      opacity: 0;
+      animation: fadeInAnimation 0.8s forwards;
+    }
+
+    @keyframes fadeInAnimation {
+      to {
+        opacity: 1;
+      }
+    }
 
 .product-description{
     margin-left: 54px;
@@ -138,6 +154,34 @@ body{
     color: #1C1415;
 } */
 .watch img{
-    width: 500px;
-    height: 200px;
+    
+    width: 100%;
+    height: 50%;
+    /* width: fit-content;
+    height: fit-content; */
+/* height: 200px; */
+    object-fit: cover;
+
+
+}
+
+.price{
+    /* height: fit-content; */
+    font-family: "Poppins";
+    font-size: 60px;
+    font-weight: 650;
+    line-height: 95.9px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: #FFFFFF;
+
+
+}
+
+.splide__pagination{
+    display: none;
+}
+
+.splide__arrow{
+    fill: white;
 }

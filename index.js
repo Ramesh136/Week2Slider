@@ -21,26 +21,34 @@ let json = `{
     "products":[
         {
             "name" : "Exquisite Watches",
+            "background": "linear-gradient(105.54deg, #F4A764 -2.93%, #FFDEC2 72.14%)",
             "subtext" : "Gold Luxury, Choose Us",
             "image" : "./images/gold.svg",
+            "price": "$499",
             "description" : "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch"
         },
         {
           "name": "Dainty Timepieces",
+          "background": "linear-gradient(105.54deg, #ADB0B0 -2.93%, #E1E1E1 72.14%)",
           "subtext": "Silver Luxury, Choose Us",
           "image": "./images/black.svg",
+          "price": "$469",
           "description" : "Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece"
         },
         {
           "name": "Elegant Timepieces",
+          "background": "linear-gradient(105.54deg, #30A357 -2.93%, #75E39A 72.14%)",
           "subtext": "Choose Luxury, Choose Us",
           "image": "./images/green.svg",
+          "price": "$529",
           "description" : "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch"
         },
         {
           "name": "Refined Timepieces",
+          "background": "linear-gradient(105.54deg, #F24F4F -2.93%, #FFA895 72.14%)",
           "subtext": "Choose Luxury, Choose Us",
           "image": "./images/red.svg",
+          "price": "$599",
           "description" :"Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece"
         }
     ],
@@ -63,6 +71,9 @@ let json = `{
 let data = JSON.parse(json)
 console.log(data)
 
+let body = document.querySelector('body')
+body.style.background =
+  "linear-gradient(105.54deg, #F4A764 -2.93%, #FFDEC2 72.14%)";
 //Loading Header
 let header = document.querySelector('.header')
 
@@ -82,18 +93,20 @@ loadHeader()
 
 let productDescription = document.querySelector(".product-description");
 
-function displayProductDescription(){
+function displayProductDescription(index=0){
+    console.log(index)
     let html = `
-        <div class="title">${data.products[1].name}</div>
+        <div class="title fade-in">${data.products[index].name}</div>
         <div class="subtext">
-            <div class="section-1">${
-              data.products[1].subtext.split(",")[0]
+            <div class="section-1 fade-in">${
+              data.products[index].subtext.split(",")[0]
             }, </div>
-            <div class="section-2">${
-              data.products[1].subtext.split(",")[1]
+            <div class="section-2 fade-in">${
+              data.products[index].subtext.split(",")[1]
             }</div>
         </div>
-        <p class="description">${data.products[1].description}</p>
+        <p class="description fade-in">${data.products[index].description}</p>
+        <div class="price fade-in">${data.products[index].price}</div>
     `;
     productDescription.innerHTML = html
 }
@@ -101,15 +114,11 @@ displayProductDescription()
 
 let carousel = new Splide(".splide", {
   width: "600px",
+  type:"loop",
   // height: '640px',
   heightRatio: 640 / 500,
   pagination: "hidden",
-  classes: {
-    arrows: "splide__arrows",
-    // arrow: "splide__arrow arrows",
-    prev: "splide__arrow splide__arrow--prev",
-    next: "splide__arrow splide__arrow--next",
-  },
+  gap: "200px",
   breakpoints: {
     990: {
       width: "400px",
@@ -118,23 +127,19 @@ let carousel = new Splide(".splide", {
     },
   },
 });
-		carousel.mount();
+carousel.mount();
 
-		carousel.on('move', (e) => {
-			let index = e;
-			updateContent(index, data.sectionBlocks);
+carousel.on('move', (e) => {
+	let index = e;
+	UpdateContent(index);
+});
 
-		});
+function UpdateContent (index){
+    displayProductDescription(index)
+    let body = document.querySelector("body");
+    body.style.background =data.products[index].background
+
+}
 
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   var splide = new Splide(".splide", {
-//     type: "loop",
-//     perPage: 1,
-//   });
-//   splide.mount();
-
-//   loadHeader()
-// }
-// );
